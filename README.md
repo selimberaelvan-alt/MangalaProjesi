@@ -67,4 +67,3 @@ Hocan en az 1 Use Case ve 1 Class Diagram istiyor[cite: 7]. Bunları bir online 
 2.  `docs/` klasörüne bu iki PDF'i ekledin mi?
 3.  `src/services/skor_servisi.py` içine yazdığımız kod duruyor mu?
 
-Eğer bunlar tamamsa, Git ve GitHub kısmına geçmeye hazır mısın? Yoksa bu belgelerin içeriğiyle ilgili sormak istediğin bir şey var mı?
