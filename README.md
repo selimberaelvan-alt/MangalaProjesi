@@ -62,8 +62,5 @@ Hocan en az 1 Use Case ve 1 Class Diagram istiyor[cite: 7]. Bunları bir online 
 
 ---
 
-**Son Kontrol:**
-1.  `README.md` dosyasını ana dizine koydun mu?
-2.  `docs/` klasörüne bu iki PDF'i ekledin mi?
-3.  `src/services/skor_servisi.py` içine yazdığımız kod duruyor mu?
+
 
