@@ -1,6 +1,6 @@
 # Efsane Mangala - BGT 132 Final Projesi
 
-Bu proje, Türk kültürünün köklü strateji oyunlarından biri olan Mangala'nın Python ve Tkinter kullanılarak geliştirilmiş dijital bir versiyonudur. Yazılım Geliştirme Teknolojileri dersi final gereksinimlerini %100 karşılayacak şekilde, modüler bir yapıda ve Nesne Yönelimli Programlama (OOP) prensipleriyle tasarlanmıştır.
+Bu proje, Türk kültürünün köklü strateji oyunlarından biri olan Mangala'nın Python ve Tkinter kullanılarak geliştirilmiş dijital bir versiyonudur. Yazılım Geliştirme Teknolojileri dersi final gereksinimlerini %100 karşılayacak şekilde, modüler bir yapıda ve Nesne Yönelimli Programlama (OOP) prensipleriyle tasarlanmıştır..
 
 ## 🎯 Proje Amacı
 Projenin temel amacı, geleneksel bir oyunu modern yazılım geliştirme süreçlerine (Gereksinim Analizi, UML, Git Versiyonlama) uygun şekilde dijital ortama aktarmaktır. Kod yapısında OOP (Kalıtım, Kapsülleme) ve modüler mimari kullanılarak sürdürülebilir bir yazılım örneği sunulmuştur.
