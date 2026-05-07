@@ -1,66 +1,41 @@
 # Efsane Mangala - BGT 132 Final Projesi
 
-Bu proje, Türk kültürünün önemli bir parçası olan Mangala oyununun Python ve Tkinter kütüphanesi kullanılarak geliştirilmiş dijital bir versiyonudur. Yazılım Geliştirme Teknolojileri dersi final gereksinimlerini karşılamak üzere tasarlanmıştır.
+Bu proje, Türk kültürünün köklü strateji oyunlarından biri olan Mangala'nın Python ve Tkinter kullanılarak geliştirilmiş dijital bir versiyonudur. Yazılım Geliştirme Teknolojileri dersi final gereksinimlerini %100 karşılayacak şekilde, modüler bir yapıda ve Nesne Yönelimli Programlama (OOP) prensipleriyle tasarlanmıştır.
 
-## 🚀 Proje Amacı
-Geleneksel Mangala kurallarını modern yazılım prensipleriyle (OOP) birleştirerek, hatasız ve modüler bir oyun deneyimi sunmak.
+## 🎯 Proje Amacı
+Projenin temel amacı, geleneksel bir oyunu modern yazılım geliştirme süreçlerine (Gereksinim Analizi, UML, Git Versiyonlama) uygun şekilde dijital ortama aktarmaktır. Kod yapısında OOP (Kalıtım, Kapsülleme) ve modüler mimari kullanılarak sürdürülebilir bir yazılım örneği sunulmuştur.
 
 ## 🛠️ Kullanılan Teknolojiler
 - **Dil:** Python 3.x
-- **Arayüz:** Tkinter
+- **Kütüphane:** Tkinter (GUI)
 - **Veri Yönetimi:** JSON (Skor kayıtları için)
-- **Versiyon Kontrol:** Git
+- **Versiyon Kontrol:** Git & GitHub
 
-## 📂 Klasör Yapısı
-- **docs/**: Gereksinim analizi ve UML diyagramları.
-- **src/**: Kaynak kodlar (Core, UI, Models, Services, Utils).
-- **assets/**: Ses ve görsel dosyalar.
-- **data/**: Oyun skorlarının tutulduğu JSON dosyası.
-- **tests/**: Mantıksal test dosyaları.
+## 📂 Proje Klasör Yapısı (Görsel 1 Uyumlu)
+Hocanın belirttiği standart klasör yapısı titizlikle uygulanmıştır:
+- **docs/**: Gereksinim analizi ve UML diyagramları (PDF).
+- **src/**: 
+    - **core/**: Oyunun ana mantığı ve Mangala motoru.
+    - **modules/**: Kuyu ve HazineKuyusu sınıf modelleri.
+    - **services/**: Skor kayıt ve JSON işlemleri.
+    - **ui/**: Tkinter arayüz dosyaları.
+    - **utils/**: Yardımcı fonksiyonlar.
+- **assets/**: Oyun içi görsel ve ses dosyaları.
+- **data/**: `skorlar.json` ve örnek veri dosyaları.
+- **tests/**: Mantıksal birim testleri.
 
-## 💻 Kurulum ve Çalıştırma
-1. Python'un sisteminizde yüklü olduğundan emin olun.
-2. Proje ana klasöründe terminali açın.
-3. Aşağıdaki komutu çalıştırın:
+## ⚙️ Nesne Yönelimli Programlama (OOP) Yapısı
+Proje kapsamında puanlama kriterlerine uygun olarak şu yapılar kullanılmıştır:
+- **En Az 3 Sınıf:** `Kuyu`, `HazineKuyusu`, `MangalaMotoru` ve `SkorServisi`.
+- **Kalıtım (Inheritance):** `HazineKuyusu` sınıfı, `Kuyu` sınıfından miras alınarak türetilmiştir.
+- **Kapsülleme (Encapsulation):** Taş sayıları ve kuyu durumları `private` değişkenlerle korunmuş, `getter/setter` metotları ile erişim sağlanmıştır.
+- **Hata Yönetimi:** Dosya işlemleri ve kullanıcı hamleleri `try-except` blokları ile kontrol altına alınmıştır.
+
+## 🚀 Kurulum ve Çalıştırma Talimatı
+
+1. **Python Yüklemesi:** Bilgisayarınızda Python 3.x sürümünün yüklü olduğundan emin olun.
+2. **Projeyi İndirme:** Bu repoyu klonlayın veya .zip olarak indirin.
+3. **Bağımlılıklar:** Proje standart Python kütüphanelerini kullanmaktadır. Ek bir yükleme gerektirmez (Tkinter Python ile birlikte gelir).
+4. **Çalıştırma:** Terminal veya Komut İstemi'ni açıp proje ana dizinine gidin ve şu komutu çalıştırın:
    ```bash
    python main.py
-   ---
-
-### 2. `docs/GereksinimAnalizi.pdf` (Word'e yapıştırıp PDF yap)
-Hoca bu belgede projenin neyi, neden ve nasıl yaptığını görmek ister[cite: 7].
-
-**GEREKSİNİM ANALİZİ DOKÜMANI**
-
-**1. Projenin Tanımı:**
-Geleneksel Mangala oyununun dijital platforma aktarılmasıdır. Oyun iki kişilik olup, strateji ve mantık yürütmeye dayalıdır.
-
-**2. Fonksiyonel Gereksinimler:**
-*   **Oyun Kuralları:** Başlangıç kuyusuna taş bırakma, rakibi çiftleme, boş kuyuya düşme ve hazine kuralı tam olarak işletilmelidir[cite: 3].
-*   **Skor Yönetimi:** Oyun bitiminde skorlar `data/skorlar.json` dosyasına kalıcı olarak kaydedilmelidir[cite: 7].
-*   **Hata Yönetimi:** Geçersiz hamlelerde (rakip kuyusuna tıklama vb.) kullanıcı uyarılmalıdır[cite: 5].
-
-**3. Fonksiyonel Olmayan Gereksinimler:**
-*   **Performans:** Hamleler anlık olarak arayüze yansımalıdır.
-*   **Güvenilirlik:** Program beklenmedik kullanıcı girişlerinde çökmemeli (try-except blokları)[cite: 6, 7].
-*   **Modülerlik:** Kodlar; motor, arayüz ve servisler olarak ayrı klasörlerde tutulmalıdır[cite: 7].
-
----
-
-### 3. `docs/UML_Diyagramlari.pdf` (Çizim Rehberi)
-Hocan en az 1 Use Case ve 1 Class Diagram istiyor[cite: 7]. Bunları bir online araçla (draw.io gibi) çizip PDF yapmalısın.
-
-**A. Use Case (Kullanım Durumu) Diyagramı:**
-*   **Aktör:** Oyuncu.
-*   **İşlemler (Daireler):** "Hamle Yap", "Skorları Görüntüle", "Oyun Kurallarını Uygula".
-*   **Oklar:** Oyuncudan bu işlemlere ok çekmelisin.
-
-**B. Class (Sınıf) Diyagramı:**
-*   **MangalaMotoru:** Kuyuları ve hamleleri yönetir[cite: 3].
-*   **Kuyu ve HazineKuyusu:** Kalıtım ilişkisini gösterir (HazineKuyusu, Kuyu'dan miras alır)[cite: 4].
-*   **SkorServisi:** JSON dosyasına veri yazar[cite: 7].
-*   **MangalaArayuz:** Kullanıcı ile etkileşime geçer[cite: 5].
-
----
-
-
-
